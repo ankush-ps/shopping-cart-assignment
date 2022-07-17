@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
+import { AuthButtons } from "../auth-buttons/AuthButtons";
 import "./Header.css";
-import { ReactComponent as CartLogo } from "../assets/cart.svg";
+import { ReactComponent as CartLogo } from "../../assets/cart.svg";
 
 const Header = () => {
   return (
@@ -18,6 +19,7 @@ const Header = () => {
       <button>
         <CartLogo height={30} width={30} />
       </button>
+      <AuthButtons />
     </header>
   );
 };
