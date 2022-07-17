@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    fill: maroon;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    margin-left: 20px;
+}
+
+button {
+    border: 0px;
+    padding: 20px;
+}
+
+svg {
+    height: 40;
+    width: 40;
+}
+
