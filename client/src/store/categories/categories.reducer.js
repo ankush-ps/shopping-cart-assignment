@@ -1,4 +1,4 @@
-import { SET_CATEGORIES } from "../../constants";
+import { SET_CATEGORIES } from "./categories.types";
 
 const initialState = [];
 

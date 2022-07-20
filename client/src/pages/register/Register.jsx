@@ -38,6 +38,25 @@ const Register = () => (
         // validate={validate}
         render={({ handleSubmit, submitting }) => (
           <form onSubmit={handleSubmit}>
+            <Field name="firstName" validate={required}>
+              {({ input, meta }) => (
+                <div className="input-group">
+                  <label>First Name</label>
+                  <input {...input} type="text" placeholder="First Name" />
+                  {meta.error && meta.touched && <span>{meta.error}</span>}
+                </div>
+              )}
+            </Field>
+            <Field name="lastName" validate={required}>
+              {({ input, meta }) => (
+                <div className="input-group">
+                  <label>Last Name</label>
+                  <input {...input} type="text" placeholder="Last Name" />
+                  {meta.error && meta.touched && <span>{meta.error}</span>}
+                </div>
+              )}
+            </Field>
+
             <Field name="email" validate={required}>
               {({ input, meta }) => (
                 <div className="input-group">
@@ -61,6 +80,28 @@ const Register = () => (
                 <div className="input-group">
                   <label>Password</label>
                   <input {...input} type="password" placeholder="Password" />
+                  {meta.error && meta.touched && <span>{meta.error}</span>}
+                </div>
+              )}
+            </Field>
+            <Field
+              name="confirmPassword"
+              validate={composeValidators(
+                required,
+                minLength(6),
+                noSpaces,
+                minOneAlphabat,
+                minOneDigit
+              )}
+            >
+              {({ input, meta }) => (
+                <div className="input-group">
+                  <label>Confirm Password</label>
+                  <input
+                    {...input}
+                    type="password"
+                    placeholder="Confirm Password"
+                  />
                   {meta.error && meta.touched && <span>{meta.error}</span>}
                 </div>
               )}

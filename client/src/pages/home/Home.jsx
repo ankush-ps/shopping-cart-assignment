@@ -1,7 +1,7 @@
 import Category from "../../components/category/Category";
 import { connect } from "react-redux";
 import { useEffect } from "react";
-import { fetchCategoriesThunk } from "../../store/categories/categories.action";
+import { fetchCategoriesThunk } from "../../store/categories/categories.actions";
 
 const Home = ({ categories, fetchCategoriesThunk }) => {
   useEffect(() => {

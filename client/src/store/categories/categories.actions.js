@@ -1,5 +1,6 @@
 import axios from "axios";
-import { API_URL, SET_CATEGORIES } from "../../constants";
+import { API_URL } from "../../constants";
+import { SET_CATEGORIES } from "./categories.types";
 
 export const fetchCategoriesThunk = () => async (dispatch) => {
   try {

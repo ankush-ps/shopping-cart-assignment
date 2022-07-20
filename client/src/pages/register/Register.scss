@@ -1,7 +1,12 @@
 .register-page {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
+}
+
+@media (min-width: 769px) {
+  .register-page {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .register-page__description {

@@ -1,10 +1,12 @@
 .login-page {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
 }
 
-.login-page__title {
+@media (min-width: 769px) {
+  .login-page {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .login-page__description {

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { fetchProductsThunk } from "../../store/products/products.action";
+import { fetchProductsThunk } from "../../store/products/products.types";
 import { connect } from "react-redux";
 import Product from "../../components/product/Product";
 import CategoryList from "../../components/side-nav/CategoryList";
-import { fetchCategoriesThunk } from "../../store/categories/categories.action";
+import { fetchCategoriesThunk } from "../../store/categories/categories.actions";
 import "./ProductsList.css";
 
 const filterProducts = (products, categoryId) => {

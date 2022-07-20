@@ -4,8 +4,9 @@ import "./Header.css";
 import { AuthButtons } from "../auth-buttons/AuthButtons";
 import { ReactComponent as CartLogo } from "../../assets/cart.svg";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-const Header = () => {
+const Header = ({ cart }) => {
   return (
     <header>
       <div className="container header__container">
@@ -24,7 +25,10 @@ const Header = () => {
         </nav>
 
         <button>
-          <CartLogo height={30} width={30} />
+          <div>
+            <CartLogo height={30} width={30} />
+            <p>{cart.cartItems.length}</p>
+          </div>
         </button>
         <AuthButtons />
       </div>
@@ -32,4 +36,6 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => ({ cart: state.cart });
+
+export default connect(mapStateToProps)(Header);
