@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export const AuthButtons = () => (
-    <div>
-        <button>Sign In</button>
-        <button>Register</button>
-    </div>
-)
+  <div>
+    <Link to="/login">Login</Link>
+    <Link to="/register">Register</Link>
+  </div>
+);

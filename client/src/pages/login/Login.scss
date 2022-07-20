@@ -1,0 +1,24 @@
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.login-page__title {
+}
+
+.login-page__description {
+  text-align: right;
+  font-weight: 500;
+}
+
+.login-page__info {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}

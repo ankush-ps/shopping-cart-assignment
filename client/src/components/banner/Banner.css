@@ -1,0 +1,46 @@
+.banner {
+  display: flex;
+  justify-content: center;
+}
+
+.banner__content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.drop-shadow {
+  position: relative;
+  float: left;
+  width: 90%;
+  padding: 1em;
+  margin: 2em 10px 4em;
+  background: #fff;
+}
+
+.drop-shadow:before,
+.drop-shadow:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+}
+
+.curved:before {
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 50%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  -moz-border-radius: 10px / 100px;
+  border-radius: 10px / 100px;
+}
+
+.curved-hz-1:before {
+  top: 50%;
+  bottom: 0;
+  left: 100px;
+  right: 100px;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}

@@ -1,25 +1,28 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    fill: maroon;
+  position: relative;
+  box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  fill: maroon;
 }
 
 ul {
-    display: flex;
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
 
 li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 button {
-    border: 0px;
-    padding: 20px;
+  border: 0px;
 }
 
 svg {
-    height: 40;
-    width: 40;
+  height: 40;
+  width: 40;
 }
-
