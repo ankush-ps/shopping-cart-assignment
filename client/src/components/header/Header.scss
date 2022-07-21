@@ -5,6 +5,32 @@ header {
   button {
     border: 0;
   }
+
+  .login-link {
+    margin-right: 15px;
+  }
+
+  .header__left {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #555;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  nav {
+    display: none;
+    @media (min-width: 769px) {
+      display: block;
+    }    
+  }
 }
 
 .header__container {
@@ -14,6 +40,12 @@ header {
 }
 
 .header__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__auth {
   display: none;
   @media (min-width: 769px) {
     display: block;
@@ -27,6 +59,10 @@ ul {
 
 li {
   margin-left: 20px;
+}
+
+button {
+  border: 0px;
 }
 
 svg {

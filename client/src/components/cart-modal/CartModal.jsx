@@ -7,6 +7,7 @@ import {
   addItemToCart,
   removeItemFromCart,
 } from "../../store/cart/cart.actions";
+import "./CartModal.scss";
 
 const customStyles = {
   content: {
@@ -41,9 +42,15 @@ const CartModal = ({ cart, addItemToCart, removeItemFromCart }) => {
 
   return (
     <>
-      <button onClick={openModal} disabled={cartItems.length === 0}>
+      <button
+        className="cart__button"
+        onClick={openModal}
+        disabled={cartItems.length === 0}
+      >
         <CartLogo height={30} width={30} />
-        <p>{cartItems.length}</p>
+        <p>
+          {cartItems.length} item{cartItems.length > 1 && "s"}
+        </p>
       </button>
       <Modal
         isOpen={modalIsOpen}

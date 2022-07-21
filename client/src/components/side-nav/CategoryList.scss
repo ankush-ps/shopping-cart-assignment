@@ -4,9 +4,13 @@
   list-style-type: none;
   margin: 0;
   padding: 0 0 0 0.5rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   background: $background;
+
+  @media (min-width: 769px) {
+    display: flex;
+  }
 }
 
 .category-menu__item {
@@ -19,4 +23,16 @@
 
 .category-menu__item__button {
   cursor: pointer;
+}
+
+.category-select {
+  background: $accent;
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+  width: 100%;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 }

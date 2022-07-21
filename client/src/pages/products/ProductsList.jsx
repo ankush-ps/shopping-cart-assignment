@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Product from "../../components/product/Product";
 import CategoryList from "../../components/side-nav/CategoryList";
 import { fetchCategoriesThunk } from "../../store/categories/categories.actions";
-import "./ProductsList.css";
+import "./ProductsList.scss";
 
 const filterProducts = (products, categoryId) => {
   return products.filter((product) => product.category === categoryId);
@@ -16,7 +16,7 @@ const ProductList = ({
   fetchProductsThunk,
   fetchCategoriesThunk,
 }) => {
-  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+  const [selectedCategoryId, setSelectedCategoryId] = useState("");
 
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -38,6 +38,7 @@ const ProductList = ({
     <main className="container products-page-grid">
       <CategoryList
         categories={categories}
+        selectedCategoryId={selectedCategoryId}
         onSelectCategory={(categoryId) => setSelectedCategoryId(categoryId)}
       />
       <div className="product-grid">
