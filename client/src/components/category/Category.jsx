@@ -1,6 +1,6 @@
 import { IMAGE_API_URL } from "../../constants";
 import Banner from "../banner/Banner";
-import "./Category.css";
+import "./Category.scss";
 
 const BUTTON_COLOR = "#d00156";
 

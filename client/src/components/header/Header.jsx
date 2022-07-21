@@ -1,11 +1,10 @@
 import React from "react";
 import logo from "../../assets/logo.png";
-import "./Header.css";
+import "./Header.scss";
 import CartModal from "../cart-modal/CartModal";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 
-const Header = ({ cart }) => {
+const Header = () => {
   return (
     <header>
       <div className="container header__container">
@@ -26,7 +25,7 @@ const Header = ({ cart }) => {
         <div>
           <CartModal />
         </div>
-        <div>
+        <div className="header__right">
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
         </div>
@@ -35,6 +34,4 @@ const Header = ({ cart }) => {
   );
 };
 
-const mapStateToProps = (state) => ({ cart: state.cart });
-
-export default connect(mapStateToProps)(Header);
+export default Header;
