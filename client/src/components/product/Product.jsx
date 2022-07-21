@@ -12,7 +12,7 @@ const Product = ({ product, addItemToCart }) => {
   const width = useWindowWidth();
 
   return (
-    <div className="product" style={{}}>
+    <div className="product">
       <div>
         <h3>{name}</h3>
       </div>
@@ -27,7 +27,7 @@ const Product = ({ product, addItemToCart }) => {
               <p>MRP Rs.{price}</p>
               <button
                 className="product__buy-button"
-                onClick={() => addItemToCart(product)}
+                onClick={() => addItemToCart({ product })}
               >
                 Buy Now
               </button>
@@ -35,7 +35,7 @@ const Product = ({ product, addItemToCart }) => {
           ) : (
             <button
               className="product__buy-button"
-              onClick={() => addItemToCart(product)}
+              onClick={() => addItemToCart({ product })}
             >
               Buy Now @ Rs.{price}
             </button>

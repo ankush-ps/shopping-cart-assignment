@@ -1,8 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import "./Header.css";
-import { AuthButtons } from "../auth-buttons/AuthButtons";
-import { ReactComponent as CartLogo } from "../../assets/cart.svg";
+import CartModal from "../cart-modal/CartModal";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -24,13 +23,13 @@ const Header = ({ cart }) => {
           </ul>
         </nav>
 
-        <button>
-          <div>
-            <CartLogo height={30} width={30} />
-            <p>{cart.cartItems.length}</p>
-          </div>
-        </button>
-        <AuthButtons />
+        <div>
+          <CartModal />
+        </div>
+        <div>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+        </div>
       </div>
     </header>
   );

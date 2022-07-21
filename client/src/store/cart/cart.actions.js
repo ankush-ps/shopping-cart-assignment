@@ -6,3 +6,10 @@ export function addItemToCart(payload) {
     payload,
   };
 }
+
+export function removeItemFromCart(payload) {
+  return {
+    type: CART_ACTION_TYPES.REMOVE_ITEM_FROM_CART,
+    payload,
+  };
+}
