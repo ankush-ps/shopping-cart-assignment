@@ -2,6 +2,7 @@ import Category from "../../components/category/Category";
 import { connect } from "react-redux";
 import { useEffect } from "react";
 import { fetchCategoriesThunk } from "../../store/categories/categories.actions";
+import DemoCarousel from "../../components/carousel/Carousel";
 
 const Home = ({ categories, fetchCategoriesThunk }) => {
   useEffect(() => {
@@ -10,6 +11,7 @@ const Home = ({ categories, fetchCategoriesThunk }) => {
 
   return (
     <main>
+      <DemoCarousel />
       {categories.map((category) => (
         <Category key={category.key} category={category} />
       ))}
