@@ -11,11 +11,18 @@
   @media (min-width: 769px) {
     display: flex;
   }
+
+  .selected {
+    background-color: $accent;
+
+    .category-menu__item__button {
+      color: white;
+    }
+  }
 }
 
 .category-menu__item {
   margin: 0;
-  padding: 10px 0 10px 1.5rem;
   color: $gray;
   font-weight: 600;
   border-bottom: 2px solid #cecece;
@@ -23,6 +30,8 @@
 
 .category-menu__item__button {
   cursor: pointer;
+  padding: 10px 0 10px 1.5rem;
+  background-color: transparent;
 }
 
 .category-select {

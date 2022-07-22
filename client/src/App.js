@@ -16,7 +16,7 @@ function App() {
         <Header />
         <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route index element={<Home />} />
             <Route path="products" element={<ProductList />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />

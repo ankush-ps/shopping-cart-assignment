@@ -5,6 +5,7 @@ import Product from "../../components/product/Product";
 import CategoryList from "../../components/side-nav/CategoryList";
 import { fetchCategoriesThunk } from "../../store/categories/categories.actions";
 import "./ProductsList.scss";
+import { useSearchParams } from "react-router-dom";
 
 const filterProducts = (products, categoryId) => {
   return products.filter((product) => product.category === categoryId);
@@ -17,21 +18,26 @@ const ProductList = ({
   fetchCategoriesThunk,
 }) => {
   const [selectedCategoryId, setSelectedCategoryId] = useState("");
-
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState(products);
 
   useEffect(() => {
-    setFilteredProducts(filterProducts(products, selectedCategoryId));
+    if (selectedCategoryId)
+      setFilteredProducts(filterProducts(products, selectedCategoryId));
+    else setFilteredProducts(products);
   }, [products, selectedCategoryId]);
 
-  useEffect(() => {
-    if (!selectedCategoryId && categories[0])
-      setSelectedCategoryId(categories[0].id);
-  }, [selectedCategoryId, categories]);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     fetchProductsThunk();
     fetchCategoriesThunk();
+
+    const categoryId = searchParams.get("categoryId");
+    if (categoryId) {
+      setSelectedCategoryId(categoryId);
+    } else {
+      setSelectedCategoryId("");
+    }
   }, []);
 
   return (
@@ -39,7 +45,10 @@ const ProductList = ({
       <CategoryList
         categories={categories}
         selectedCategoryId={selectedCategoryId}
-        onSelectCategory={(categoryId) => setSelectedCategoryId(categoryId)}
+        onSelectCategory={(categoryId) => {
+          setSelectedCategoryId(categoryId);
+          setSearchParams({ categoryId });
+        }}
       />
       <div className="product-grid">
         {filteredProducts.map((product) => (
