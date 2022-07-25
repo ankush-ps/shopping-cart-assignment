@@ -9,18 +9,24 @@
   }
 }
 
-.register-page__description {
-  text-align: right;
-  font-weight: 500;
-}
-
 .register-page__info {
   display: flex;
   flex-direction: column;
   justify-self: flex-end;
+  padding-right: 2rem;
+
+  .register-page__description {
+    text-align: right;
+    font-weight: 500;
+  }
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
+.register-page__form {
+  padding: 2rem;
+
+  button {
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
 }

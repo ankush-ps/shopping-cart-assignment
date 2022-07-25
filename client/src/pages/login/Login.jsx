@@ -43,7 +43,7 @@ const Login = () => (
                 <div className="input-group">
                   <label>Email</label>
                   <input {...input} type="email" placeholder="Email" />
-                  {meta.error && meta.touched && <span>{meta.error}</span>}
+                  {meta.error && meta.touched && <span>* {meta.error}</span>}
                 </div>
               )}
             </Field>
@@ -61,7 +61,7 @@ const Login = () => (
                 <div className="input-group">
                   <label>Password</label>
                   <input {...input} type="password" placeholder="Password" />
-                  {meta.error && meta.touched && <span>{meta.error}</span>}
+                  {meta.error && meta.touched && <span>* {meta.error}</span>}
                 </div>
               )}
             </Field>
