@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        .drop-shadow {
+            position: relative;
+            width: 90%;
+            background-color: aliceblue;
+        }
+
+        .drop-shadow:before,
+        .drop-shadow:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            height: 20%;
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            transform: rotate(-3deg);
+        }
+    </style>
+</head>
+<body>
+
+        <div class="drop-shadow">
+            <p>Single horizontal curve</p>
+        </div>
+
+</body>
+</html>

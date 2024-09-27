@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Demo: CSS drop-shadows without images &#8211; Nicolas Gallagher</title>
+    <meta name="description" content="Using CSS pseudo-elements, box-shadows, and transforms to create drop-shadow effects without images from semantic HTML">
+    <link rel="canonical" href="/css-drop-shadows-without-images/demo/">
+    <style>
+        body {
+            background: white;
+        }
+
+        .drop-shadow {
+            position:
+            relative;
+            float:
+            left;
+            width:40%;
+            padding:1em;
+            margin:2em 10px 4em;
+            background:#fff;
+            box-shadow: 0 1px 4px -4px rgba(0, 0, 0, 0.3)
+        }
+
+        .drop-shadow:before,
+        .drop-shadow:after {
+            content:"";
+            position:absolute;
+            z-index:-2;
+        }
+
+        .drop-shadow p {
+            font-size:16px;
+            font-weight:bold;
+        }
+
+        .curved:before {
+            top:10px;
+            bottom:10px;
+            left:0;
+            right:50%;
+            -webkit-box-shadow:0 10px 15px rgba(0,0,0,0.6);
+            -moz-box-shadow:0 10px  15px rgba(0,0,0,0.6);
+            box-shadow:0 10px 15px rgba(0,0,0,0.6);
+            -moz-border-radius:10px / 100px;
+            border-radius:10px / 100px;
+        }
+
+        .curved-hz-1:before {
+            top:50%;
+            bottom:0;
+            left:10px;
+            right:10px;
+            -moz-border-radius:100px / 10px;
+            border-radius:100px / 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+        <div class="drop-shadow curved curved-hz-1">
+            <p>Single horizontal curve</p>
+        </div>
+
+</body>
+</html>

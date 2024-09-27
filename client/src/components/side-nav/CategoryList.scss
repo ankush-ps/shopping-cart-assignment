@@ -1,0 +1,47 @@
+@import "styles/colors";
+
+.category-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 0.5rem;
+  display: none;
+  flex-direction: column;
+  background: $background;
+
+  @media (min-width: 769px) {
+    display: flex;
+  }
+
+  .selected {
+    background-color: $accent;
+
+    .category-menu__item__button {
+      color: white;
+    }
+  }
+}
+
+.category-menu__item {
+  margin: 0;
+  color: $gray;
+  font-weight: 600;
+  border-bottom: 2px solid #cecece;
+}
+
+.category-menu__item__button {
+  cursor: pointer;
+  padding: 10px 0 10px 1.5rem;
+  background-color: transparent;
+}
+
+.category-select {
+  background: $accent;
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+  width: 100%;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}

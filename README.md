@@ -13,3 +13,19 @@ npm run start
 yarn install
 yarn start
 ```
+
+Three spearate server are needed for this
+
+Mock server - started above
+Image server - run the following command
+```
+node server.js
+```
+
+React client server
+Go to client folder, run
+```
+npm install
+npm start
+```
+
